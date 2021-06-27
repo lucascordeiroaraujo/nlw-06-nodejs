@@ -8,6 +8,8 @@ import { tagsRouter } from '@modules/tags/infra/http/routes/tags.routes'
 
 import { complimentRouter } from '@modules/compliments/infra/http/routes/compliments.routes'
 
+import { listComplimentRouter } from '@modules/compliments/infra/http/routes/list-compliments.routes'
+
 const routes = Router()
 
 routes.use('/users', usersRouter)
@@ -16,6 +18,6 @@ routes.use('/session', sessionRouter)
 
 routes.use('/tags', tagsRouter)
 
-routes.use('/compliments', complimentRouter)
+routes.use('/compliments', complimentRouter, listComplimentRouter)
 
 export { routes }
